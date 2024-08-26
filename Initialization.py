@@ -1,6 +1,6 @@
 import random
 import os
-
+import tensorflow as tf
 from tf.keras.utils import to_categorical
 from tf.keras.models import Sequential, Model
 from tf.keras.layers import Input, Lambda, Convolution2D, MaxPooling2D
