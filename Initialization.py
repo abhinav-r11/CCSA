@@ -178,7 +178,7 @@ def training_the_model(model,domain_adaptation_task,repetition,sample_per_class)
     for e in range(epoch):
         if e % 10 == 0:
             printn(str(e) + '->')
-        for i in range(len(y2) / nn):
+        for i in range(len(y2) // nn):
             loss = model.train_on_batch([X1[i * nn:(i + 1) * nn, :, :, :], X2[i * nn:(i + 1) * nn, :, :, :]],
                                         [y1[i * nn:(i + 1) * nn, :], yc[i * nn:(i + 1) * nn, ]])
             loss = model.train_on_batch([X2[i * nn:(i + 1) * nn, :, :, :], X1[i * nn:(i + 1) * nn, :, :, :]],
