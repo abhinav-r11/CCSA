@@ -190,5 +190,5 @@ def training_the_model(model,domain_adaptation_task,repetition,sample_per_class)
 
         if best_Acc < Acc:
             best_Acc = Acc
-    print (str(e))
+    print(str(e))
     return best_Acc
