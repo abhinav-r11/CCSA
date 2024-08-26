@@ -33,7 +33,7 @@ def Create_Pairs(domain_adaptation_task,repetition,sample_per_class):
             raise Exception('number of sample_per_class should be between 1 and 7.')
 
 
-    print 'Creating pairs for repetition: '+str(cc)+' and sample_per_class: '+str(sample_per_class)
+    print ('Creating pairs for repetition: '+str(cc)+' and sample_per_class: '+str(sample_per_class))
 
     X_train_target=np.load('./row_data/' + UM + '_X_train_target_repetition_' + str(cc) + '_sample_per_class_' + str(SpC) + '.npy')
     y_train_target=np.load('./row_data/' + UM + '_y_train_target_repetition_' + str(cc) + '_sample_per_class_' + str(SpC) + '.npy')
