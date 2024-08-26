@@ -1,7 +1,7 @@
 import random
 import os
 
-from keras.utils import np_utils
+from keras.utils import to_categorical
 from keras.models import Sequential, Model
 from keras.layers import Input, Lambda, Convolution2D, MaxPooling2D
 from keras.layers import Activation, Dropout, Flatten, Dense
@@ -156,7 +156,7 @@ def training_the_model(model,domain_adaptation_task,repetition,sample_per_class)
     X_test = np.load('./row_data/' + UM + '_X_test_target_repetition_' + str(cc) + '_sample_per_class_' + str(SpC)+'.npy')
     y_test = np.load('./row_data/' + UM + '_y_test_target_repetition_' + str(cc) + '_sample_per_class_' + str(SpC)+'.npy')
     X_test = X_test.reshape(X_test.shape[0], 16, 16, 1)
-    y_test = np_utils.to_categorical(y_test, nb_classes)
+    y_test = to_categorical(y_test, nb_classes)
 
 
     X1 = np.load('./pairs/' + UM + '_X1_count_' + str(cc) + '_SpC_' + str(SpC) + '.npy')
@@ -169,8 +169,8 @@ def training_the_model(model,domain_adaptation_task,repetition,sample_per_class)
     y2 = np.load('./pairs/' + UM + '_y2_count_' + str(cc) + '_SpC_' + str(SpC) + '.npy')
     yc = np.load('./pairs/' + UM + '_yc_count_' + str(cc) + '_SpC_' + str(SpC) + '.npy')
 
-    y1 = np_utils.to_categorical(y1, nb_classes)
-    y2 = np_utils.to_categorical(y2, nb_classes)
+    y1 = to_categorical(y1, nb_classes)
+    y2 = to_categorical(y2, nb_classes)
 
     print ('Training the model - Epoch '+str(epoch))
     nn=batch_size
