@@ -172,7 +172,7 @@ def training_the_model(model,domain_adaptation_task,repetition,sample_per_class)
     y1 = np_utils.to_categorical(y1, nb_classes)
     y2 = np_utils.to_categorical(y2, nb_classes)
 
-    print 'Training the model - Epoch '+str(epoch)
+    print ('Training the model - Epoch '+str(epoch))
     nn=batch_size
     best_Acc = 0
     for e in range(epoch):
