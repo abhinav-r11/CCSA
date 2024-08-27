@@ -1,12 +1,12 @@
 import random
 import os
-import tensorflow as tf
-from tf.keras.utils import to_categorical
-from tf.keras.models import Sequential, Model
-from tf.keras.layers import Input, Lambda, Convolution2D, MaxPooling2D
-from tf.keras.layers import Activation, Dropout, Flatten, Dense
-from tf.keras.optimizers import SGD, RMSprop, Adam, Adadelta, Nadam
-from tf.keras import backend as K
+from tensorflow import keras
+from keras.utils import to_categorical
+from keras.models import Sequential, Model
+from keras.layers import Input, Lambda, Convolution2D, MaxPooling2D
+from keras.layers import Activation, Dropout, Flatten, Dense
+from keras.optimizers import SGD, RMSprop, Adam, Adadelta, Nadam
+from keras import backend as K
 import numpy   as np
 import sys
 
