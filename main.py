@@ -1,8 +1,8 @@
 import Initialization
-import tensorflow as tf
-from tf.keras.layers import Activation, Dropout, Dense
-from tf.keras.layers import Input, Lambda
-from tf.keras.models import Model
+from tensorflow import keras
+from keras.layers import Activation, Dropout, Dense
+from keras.layers import Input, Lambda
+from keras.models import Model
 
 # let's assume MNIST->USPS task.
 domain_adaptation_task = 'MNIST_to_USPS'   # USPS_to_MNIST is also another option.
